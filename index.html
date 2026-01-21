@@ -193,6 +193,12 @@
   toggle.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
+  window.onload = () => {
+    window.scrollTo(0, 0);
+    history.replaceState(null, null, ' ');
+  };
+
+
 </script>
 
 </body>
