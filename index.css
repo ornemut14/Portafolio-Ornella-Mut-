@@ -681,3 +681,41 @@ footer a {
     display: flex;
   }
 }
+/* =====================
+   WHATSAPP FIX MOBILE
+===================== */
+
+.whatsapp-float {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+  font-size: 0; /* evita que el navegador meta texto/iconos */
+}
+
+/* Fuerza el SVG siempre */
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-float svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* Evita íconos automáticos del navegador */
+.whatsapp-float::before,
+.whatsapp-float::after {
+  content: none !important;
+}
