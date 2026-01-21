@@ -1,0 +1,493 @@
+/* =====================
+   RESET & BASE
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #050510;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+/* =====================
+   HEADER
+===================== */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 25px 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  z-index: 100;
+}
+
+header strong {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.9rem;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+
+nav a {
+  margin-left: 30px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover {
+  opacity: 1;
+}
+
+/* =====================
+   SECTIONS
+===================== */
+section {
+  padding: 90px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+/* =====================
+   HERO
+===================== */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-avatar {
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-avatar img {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  box-shadow:
+    0 0 0 8px rgba(142, 162, 255, 0.12),
+    0 35px 80px rgba(0, 0, 0, 0.65);
+  background: #050510;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+  max-width: 640px;
+  margin: 16px auto 0;
+}
+
+.hero-role {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* =====================
+   TITLES & TEXT
+===================== */
+h2 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 80px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.gradient {
+  background: linear-gradient(90deg, #8ea2ff, #c6ffb7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =====================
+   BUTTON
+===================== */
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 40px;
+  border-radius: 30px;
+  border: 2px solid #8ea2ff;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: rgba(142, 162, 255, 0.15);
+}
+
+/* =====================
+   SERVICES SECTION
+===================== */
+.services-section {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    #050510 0%,
+    #0A1A2F 20%,
+    #12345a 50%,
+    #0A1A2F 80%,
+    #050510 100%
+  );
+  overflow: hidden;
+}
+/* Reducir espacio debajo de las cards de servicios */
+.services-section {
+  padding-bottom: 60px;
+}
+
+/* Por si las cards tienen margen propio */
+.services-grid,
+.services-cards,
+.services {
+  margin-bottom: 0;
+}
+
+.services-section::before {
+  content: "";
+  position: absolute;
+  top: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 440px;
+  background: radial-gradient(
+    ellipse 60% 100% at center bottom,
+    transparent 0%,
+    transparent 55%,
+    #050510 70%
+  );
+  z-index: 0;
+}
+
+.services-section::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 26, 47, 0) 0%,
+    #050510 100%
+  );
+  pointer-events: none;
+}
+
+.services-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* =====================
+   CARDS
+===================== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.card h3 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.card p {
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+/* =====================
+   PROJECTS
+===================== */
+
+/* Ajuste fino antes de Proyectos */
+#proyectos {
+  padding-top: 60px;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.filters button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.filters .active {
+  background: #7fb800;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.project {
+  position: relative;
+  display: block;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.project:hover img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px;
+  background: rgba(60, 60, 60, 0.75);
+  backdrop-filter: blur(6px);
+}
+
+.project-info strong {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+}
+
+.project-info span {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  padding: 100px 80px 40px;
+  background: #050510;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+footer h4 {
+  margin-bottom: 15px;
+}
+
+footer p,
+footer a {
+  color: #aaa;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0.6;
+}
+
+/* =====================
+   CONTACT LINKS
+===================== */
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #aaa;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.contact-link svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+.contact-link:hover {
+  color: #fff;
+}
+
+/* =====================
+   WHATSAPP FLOAT
+===================== */
+.whatsapp-float {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 55px;
+  height: 55px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+  fill: #fff;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+}
+
+.project-info {
+  position: absolute;
+  inset: 0; /* ocupa todo el recuadro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(60, 60, 60, 0.75);
+  backdrop-filter: blur(6px);
+  color: #fff;
+
+  text-align: center;
+}
+
+.project-info strong {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.project-info span {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  color: #fff;
+}
+.project-info {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project:hover .project-info {
+  opacity: 1;
+}
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content h1 {
+  opacity: 0;
+  animation: heroFadeUp 0.9s ease forwards;
+}
+
+.hero-role {
+  opacity: 0;
+  animation: heroFadeUp 0.9s ease forwards;
+  animation-delay: 0.15s;
+}
+
+.hero-text {
+  opacity: 0;
+  animation: heroFadeUp 0.9s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero .btn {
+  opacity: 0;
+  animation: heroFadeUp 0.9s ease forwards;
+  animation-delay: 0.45s;
+}
+.hero-content h1 {
+  animation: heroFadeUp 0.9s ease forwards,
+             heroZoom 1.2s ease forwards;
+}
+
+@keyframes heroZoom {
+  from {
+    letter-spacing: 2px;
+  }
+  to {
+    letter-spacing: 0;
+  }
+}
