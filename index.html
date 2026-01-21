@@ -20,6 +20,7 @@
 
 <canvas id="stars"></canvas>
 
+
 <header>
   <strong>Portafolio</strong>
 
@@ -184,22 +185,81 @@
 </a>
 
 
-<!-- JS -->
 <script>
-  // Menú mobile
-  const toggle = document.querySelector('.menu-toggle');
-  const nav = document.getElementById('nav');
+/* =====================
+   MENU MOBILE
+===================== */
+const toggle = document.querySelector('.menu-toggle');
+const nav = document.getElementById('nav');
 
+if (toggle && nav) {
   toggle.addEventListener('click', () => {
     nav.classList.toggle('open');
   });
-  window.onload = () => {
-    window.scrollTo(0, 0);
-    history.replaceState(null, null, ' ');
-  };
+}
 
+/* =====================
+   FORCE SCROLL TOP
+===================== */
+window.onload = () => {
+  window.scrollTo(0, 0);
+  history.replaceState(null, null, ' ');
+};
 
+/* =====================
+   STARS BACKGROUND
+===================== */
+const canvas = document.getElementById("stars");
+const ctx = canvas.getContext("2d");
+
+let stars = [];
+const STAR_COUNT = 120;
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+function createStars() {
+  stars = [];
+  for (let i = 0; i < STAR_COUNT; i++) {
+    stars.push({
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      r: Math.random() * 1.2 + 0.3,
+      alpha: Math.random(),
+      speed: Math.random() * 0.15 + 0.05
+    });
+  }
+}
+
+createStars();
+
+function drawStars() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  for (let star of stars) {
+    ctx.beginPath();
+    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
+    ctx.fill();
+
+    star.y += star.speed;
+    if (star.y > canvas.height) {
+      star.y = 0;
+      star.x = Math.random() * canvas.width;
+    }
+  }
+
+  requestAnimationFrame(drawStars);
+}
+
+drawStars();
 </script>
+
 
 </body>
 </html>
