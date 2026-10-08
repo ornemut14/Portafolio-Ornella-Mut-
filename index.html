@@ -2,287 +2,305 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Portafolio | Ornella Mut</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  />
-  <!-- CSS -->
-  <link rel="stylesheet" href="index.css">
+  <title>Ornella Mut — Desarrolladora Web & Software a Medida</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio de Ornella Mut — Creo sitios web, sistemas de gestión y plataformas digitales pensadas para optimizar procesos y hacer crecer negocios." />
+  <meta name="theme-color" content="#F1E8CF" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
-
 <body>
 
-<canvas id="stars"></canvas>
+<div class="grain" aria-hidden="true"></div>
 
-
-<header>
-  <strong>Portafolio</strong>
-
-  <!-- Botón menú mobile -->
-  <button class="menu-toggle" aria-label="Abrir menú">
-    ☰
-  </button>
-
-  <nav id="nav">
-    <a href="#inicio">Inicio</a>
-    <a href="#servicios">Servicios</a>
-    <a href="#proyectos">Proyectos</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
+<header class="nav" id="topnav">
+  <div class="nav-inner">
+    <a href="#inicio" class="brand">
+      <span class="brand-mark">OM</span>
+      <span class="brand-text">Ornella Mut <em>— Portfolio 2026</em></span>
+    </a>
+    <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="nav" aria-label="Navegación principal">
+      <a href="#inicio" class="active">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#stack">Stack</a>
+      <a href="#contacto" class="nav-cta">Contacto <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
 </header>
 
+<main>
+<!-- ============ HERO ============ -->
 <section class="hero" id="inicio">
-  <div class="hero-avatar">
-    <img 
-      src="image.png" 
-      alt="Foto de Ornella Mut"
-      loading="lazy"
-    >
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal"><span class="dot"></span> Disponible para proyectos — San Juan / Remoto</p>
+      <h1 class="reveal">
+        <span class="line">Desarrollo productos</span>
+        <span class="line">digitales <em>claros,</em></span>
+        <span class="line">útiles y elegantes.</span>
+      </h1>
+      <p class="hero-name reveal">Ornella Mut — Desarrolladora Web & Software a Medida</p>
+      <p class="hero-desc reveal">
+        Creo sitios web, sistemas de gestión y plataformas digitales
+        pensadas para optimizar procesos y hacer crecer negocios.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#proyectos" class="btn btn-dark">Ver proyectos</a>
+        <a href="https://wa.me/5492644362739" target="_blank" class="btn btn-line">
+          <i class="fa-brands fa-whatsapp"></i> Hablemos
+        </a>
+      </div>
+      <div class="hero-meta reveal">
+        <div><strong>E-commerce</strong><span>Tiendas & pedidos</span></div>
+        <div><strong>Landing</strong><span>Conversión</span></div>
+        <div><strong>Sistemas</strong><span>A medida</span></div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal">
+      <div class="portrait-card">
+        <div class="portrait-frame">
+          <img src="image.png" alt="Foto de Ornella Mut" loading="eager" />
+        </div>
+        <div class="portrait-foot">
+          <div>
+            <strong>Ornella Mut</strong>
+            <span>San Juan, Argentina</span>
+          </div>
+          <span class="badge">● Enfoque en calidad</span>
+        </div>
+      </div>
+      <div class="float-note n1">Diseño + Código</div>
+      <div class="float-note n2">UX cuidada</div>
+    </div>
   </div>
+  <div class="hero-rule"></div>
+  <p class="hero-strip">Landing Pages &nbsp;·&nbsp; E-commerce &nbsp;·&nbsp; Sistemas a medida &nbsp;·&nbsp; Automatización</p>
+</section>
 
-  <div class="hero-content">
-    <h1>
-      <span class="gradient">Ornella Mut</span>
-    </h1>
-
-    <h3 class="hero-role">
-      Desarrolladora Web & Software a Medida
-    </h3>
-
-    <p class="hero-text">
-      Creo sitios web, sistemas de gestión y plataformas digitales
-      pensadas para optimizar procesos y hacer crecer negocios.
-    </p>
-
-    <a href="#proyectos" class="btn">Ver proyectos</a>
+<!-- ============ SERVICIOS ============ -->
+<section class="section" id="servicios">
+  <div class="section-head reveal">
+    <p class="label">Servicios</p>
+    <h2>Soluciones simples <em>para problemas reales.</em></h2>
+    <p class="sub">Tres formas en las que puedo ayudarte a ordenar, vender y escalar.</p>
+  </div>
+  <div class="services">
+    <article class="service reveal">
+      <span class="num">01</span>
+      <h3>Landing Pages</h3>
+      <p>Páginas modernas y atractivas enfocadas en conversión, carga rápida y diseño responsive.</p>
+      <span class="tag">Diseño web · Conversión</span>
+    </article>
+    <article class="service reveal">
+      <span class="num">02</span>
+      <h3>E-commerce</h3>
+      <p>Tiendas online con catálogo, carrito y gestión de pedidos, integradas con WhatsApp o flujos personalizados.</p>
+      <span class="tag">Catálogo · Carrito · Pedidos</span>
+    </article>
+    <article class="service reveal">
+      <span class="num">03</span>
+      <h3>Sistemas a Medida</h3>
+      <p>Desarrollo de sistemas personalizados para automatizar procesos y mejorar la gestión interna.</p>
+      <span class="tag">Gestión · Automatización</span>
+    </article>
   </div>
 </section>
 
-<section class="services-section" id="servicios">
-  <h2>Servicios</h2>
-
-  <div class="cards">
-    <div class="card">
-      <h3 class="gradient">Landing Pages</h3>
-      <p>
-        Páginas modernas y atractivas enfocadas en conversión,
-        carga rápida y diseño responsive.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="gradient">E-commerce</h3>
-      <p>
-        Tiendas online con catálogo, carrito y gestión de pedidos,
-        integradas con WhatsApp o flujos personalizados.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3 class="gradient">Sistemas a Medida</h3>
-      <p>
-        Desarrollo de sistemas personalizados para automatizar
-        procesos y mejorar la gestión interna.
-      </p>
-    </div>
+<!-- ============ PROYECTOS ============ -->
+<section class="section section-alt" id="proyectos">
+  <div class="section-head reveal">
+    <p class="label">Proyectos seleccionados</p>
+    <h2>Trabajo real, <em>presentado con cuidado.</em></h2>
+    <p class="sub">Una selección de e-commerce, landings y software a medida.</p>
   </div>
-</section>
-<section id="proyectos">
-  <h2>Proyectos</h2>
 
-  <div class="projects">
+  <div class="work-grid">
+    <article class="work work-text reveal">
+      <a class="work-text-inner" href="https://zafiros-ecommerce-pv1g.vercel.app/" target="_blank" aria-label="Ver Zafiros E-commerce">
+        <span class="work-icon"><i class="fa-solid fa-gem"></i></span>
+        <p class="work-cat">Joyería E-commerce</p>
+        <h3>Zafiros — Joyería E-commerce</h3>
+        <p>Versión actualizada de la tienda online de joyería. Catálogo, carrito y gestión de pedidos con flujo personalizado.</p>
+        <div class="stack"><span>E-commerce</span><span>Catálogo</span><span>Pedidos</span></div>
+        <span class="text-link">Visitar ↗</span>
+      </a>
+    </article>
 
-    <a href="https://gncrivadavia.com.ar/nuevo-gnc/landing/index.html" target="_blank" class="project">
-      <img src="gncrivadavia.png" alt="GNC Rivadavia" loading="lazy">
-      <div class="project-info">
-        <strong>GNC Rivadavia</strong>
-        <span>Sistema de gestión</span>
-      </div>
-    </a>
+    <article class="work work-text reveal">
+      <a class="work-text-inner" href="https://odcconsultora.com.ar/" target="_blank" aria-label="Ver ODC Consultora">
+        <span class="work-icon"><i class="fa-solid fa-briefcase"></i></span>
+        <p class="work-cat">Landing institucional</p>
+        <h3>ODC Consultora</h3>
+        <p>Landing institucional clara y profesional para consultora.</p>
+        <span class="text-link">Visitar ↗</span>
+      </a>
+    </article>
 
-    <a href="https://uccopy.online/" target="_blank" class="project">
-      <img src="uccopy.png" alt="UCCopy" loading="lazy">
-      <div class="project-info">
-        <strong>UCCopy</strong>
-        <span>E-commerce</span>
-      </div>
-    </a>
+    <article class="work work-text reveal">
+      <a class="work-text-inner" href="https://estudiogaradeallende.com/" target="_blank" aria-label="Ver Estudio Garade Allende">
+        <span class="work-icon"><i class="fa-solid fa-scale-balanced"></i></span>
+        <p class="work-cat">Landing jurídica</p>
+        <h3>Estudio Garade Allende</h3>
+        <p>Landing para estudio jurídico, sobria y legible.</p>
+        <span class="text-link">Visitar ↗</span>
+      </a>
+    </article>
 
-    <a href="https://www.linkedin.com/posts/ornella-mut-04757a274_webdesign-landingpage-marketingdigital-activity-7325584521486065667-BsCI" target="_blank" class="project">
-      <img src="alfil.png" alt="Landing Page" loading="lazy">
-      <div class="project-info">
-        <strong>Landing Page</strong>
-        <span>Diseño web</span>
-      </div>
-    </a>
+    <article class="work work-text reveal">
+      <a class="work-text-inner" href="https://www.linkedin.com/posts/ornella-mut-04757a274_webdesign-landingpage-marketingdigital-activity-7325584521486065667-BsCI" target="_blank" aria-label="Ver Landing Page en LinkedIn">
+        <span class="work-icon"><i class="fa-solid fa-window-maximize"></i></span>
+        <p class="work-cat">Diseño web</p>
+        <h3>Landing Page</h3>
+        <p>Landing orientada a conversión, ver caso en LinkedIn.</p>
+        <span class="text-link">Visitar ↗</span>
+      </a>
+    </article>
 
-    <a href="https://zafiros.netlify.app/" target="_blank" class="project">
-      <img src="zafiros.png" alt="Zafiros E-commerce" loading="lazy">
-      <div class="project-info">
-        <strong>Zafiros</strong>
-        <span>E-commerce</span>
-      </div>
-    </a>
-
-    <a href="https://odcconsultora.com.ar/" target="_blank" class="project">
-      <img src="odc.png" alt="ODC Consultora" loading="lazy">
-      <div class="project-info">
-        <strong>ODC Consultora</strong>
-        <span>Landing institucional</span>
-      </div>
-    </a>
-
-    <a href="https://estudiogaradeallende.com/" target="_blank" class="project">
-      <img src="garade.png" alt="Estudio Garade Allende" loading="lazy">
-      <div class="project-info">
-        <strong>Estudio Garade Allende</strong>
-        <span>Landing jurídica</span>
-      </div>
-    </a>
-
+    <article class="work work-text reveal">
+      <a class="work-text-inner" href="https://lnkd.in/p/e9nUTC2P" target="_blank" aria-label="Ver Gorditos Felices en LinkedIn">
+        <span class="work-icon"><i class="fa-solid fa-desktop"></i></span>
+        <p class="work-cat">App de escritorio</p>
+        <h3>Gorditos Felices</h3>
+        <p>Aplicación de escritorio para gestión. No disponible para descarga — ver publicación.</p>
+        <span class="text-link">Visitar ↗</span>
+      </a>
+    </article>
   </div>
 </section>
 
-<footer id="contacto">
-  <div class="footer-grid">
-
-    <div>
-      <h4>Sobre mí</h4>
-      <p>
-        Desarrolladora especializada en soluciones web modernas,
-        enfocada en calidad y buenas prácticas.
-      </p>
+<!-- ============ SOBRE MI ============ -->
+<section class="section about" id="sobre-mi">
+  <div class="about-grid">
+    <div class="reveal">
+      <p class="label">Sobre mí</p>
+      <h2>Desarrollo con criterio, <em>no solo código.</em></h2>
     </div>
-
-    <div>
-      <h4>Servicios</h4>
-      <a href="#servicios">Desarrollo Web</a>
-      <a href="#servicios">Sistemas a Medida</a>
-      <a href="#servicios">Automatización</a>
+    <div class="reveal">
+      <p class="lead">Desarrolladora especializada en soluciones web modernas, enfocada en calidad y buenas prácticas.</p>
+      <p class="muted">Creo sitios web, sistemas de gestión y plataformas digitales pensadas para optimizar procesos y hacer crecer negocios. Me interesa que cada proyecto sea claro para el cliente y fácil de mantener.</p>
+      <ul class="about-list">
+        <li><i class="fa-solid fa-check"></i> Diseño responsive y carga rápida</li>
+        <li><i class="fa-solid fa-check"></i> Comunicación directa y entregas cuidadas</li>
+        <li><i class="fa-solid fa-check"></i> Base en San Juan · trabajo remoto</li>
+      </ul>
     </div>
-
-    <div>
-      <h4>Contacto</h4>
-
-      <div class="footer-social">
-  <a href="mailto:tuemail@gmail.com" aria-label="Email">
-    <i class="fa-solid fa-envelope"></i>
-  </a>
-
-  <a href="https://www.linkedin.com/in/tuusuario" target="_blank" aria-label="LinkedIn">
-    <i class="fa-brands fa-linkedin-in"></i>
-  </a>
-
-  <a href="https://github.com/tuusuario" target="_blank" aria-label="GitHub">
-    <i class="fa-brands fa-github"></i>
-  </a>
-</div>
-    </div>
-    <div>
-      <h4>Ubicación</h4>
-      <span>San Juan, Argentina</span>
-      <span>Trabajo remoto</span>
-    </div>
-
   </div>
 
-  <div class="copy">
-    © 2026 – Portafolio Profesional
+  <div class="stack-section reveal" id="stack">
+    <h3>Capacidades & enfoque</h3>
+    <p>Todo lo que ves aquí sale directamente de los servicios y proyectos publicados en este portfolio.</p>
+    <div class="stack-groups">
+      <div class="stack-group">
+        <p>Producto</p>
+        <div class="caps">
+          <span>Landing Pages</span>
+          <span>E-commerce</span>
+          <span>Tiendas online</span>
+          <span>Sistemas a medida</span>
+          <span>Software a medida</span>
+          <span>Apps de escritorio</span>
+          <span>Sitios institucionales</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p>Capacidades</p>
+        <div class="caps">
+          <span>Catálogo</span>
+          <span>Carrito</span>
+          <span>Gestión de pedidos</span>
+          <span>Gestión interna</span>
+          <span>Conversión</span>
+          <span>Automatización</span>
+          <span>Optimización de procesos</span>
+          <span>Flujos personalizados</span>
+          <span>Integración WhatsApp</span>
+          <span>Diseño responsive</span>
+        </div>
+      </div>
+      <div class="stack-group">
+        <p>Forma de trabajo</p>
+        <div class="caps">
+          <span>Comunicación directa</span>
+          <span>Entregas cuidadas</span>
+          <span>Carga rápida</span>
+          <span>Trabajo remoto</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contacto">
+  <div class="contact-card reveal">
+    <p class="label light">Contacto</p>
+    <h2>¿Creamos algo <em>bueno?</em></h2>
+    <p class="sub">Contame tu idea y te respondo a la brevedad. Trabajo remoto para todo el país.</p>
+    <div class="contact-actions">
+      <a href="https://wa.me/5492644362739" target="_blank" class="btn btn-dark"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=ornellamut39@gmail.com" target="_blank" class="btn btn-line-dark"><i class="fa-solid fa-envelope"></i> Email</a>
+      <a href="https://www.linkedin.com/in/ornella-mut-04757a274/" target="_blank" class="btn btn-line-dark"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+      <a href="https://github.com/ornemut14" target="_blank" class="btn btn-line-dark"><i class="fa-brands fa-github"></i> GitHub</a>
+    </div>
+    <p class="contact-loc">San Juan, Argentina · Trabajo remoto</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Ornella Mut — Portafolio profesional</span>
+    <span class="footer-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </span>
   </div>
 </footer>
 
-<!-- WhatsApp -->
-<a
-  href="https://wa.me/5492644362739"
-  class="whatsapp-float"
-  target="_blank"
-  aria-label="WhatsApp"
->
+<a href="https://wa.me/5492644362739" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
   <i class="fa-brands fa-whatsapp"></i>
 </a>
 
-
 <script>
-/* =====================
-   MENU MOBILE
-===================== */
 const toggle = document.querySelector('.menu-toggle');
 const nav = document.getElementById('nav');
-
 if (toggle && nav) {
   toggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
 }
 
-/* =====================
-   FORCE SCROLL TOP
-===================== */
-window.onload = () => {
-  window.scrollTo(0, 0);
-  history.replaceState(null, null, ' ');
-};
+/* Reveal on scroll */
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-/* =====================
-   STARS BACKGROUND
-===================== */
-const canvas = document.getElementById("stars");
-const ctx = canvas.getContext("2d");
-
-let stars = [];
-const STAR_COUNT = 120;
-
-function resizeCanvas() {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-
-window.addEventListener("resize", resizeCanvas);
-resizeCanvas();
-
-function createStars() {
-  stars = [];
-  for (let i = 0; i < STAR_COUNT; i++) {
-    stars.push({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      r: Math.random() * 1.2 + 0.3,
-      alpha: Math.random(),
-      speed: Math.random() * 0.15 + 0.05
-    });
-  }
-}
-
-createStars();
-
-function drawStars() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  for (let star of stars) {
-    ctx.beginPath();
-    ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(255, 255, 255, ${star.alpha})`;
-    ctx.fill();
-
-    star.y += star.speed;
-    if (star.y > canvas.height) {
-      star.y = 0;
-      star.x = Math.random() * canvas.width;
+/* Active nav */
+const sections = ['inicio','servicios','proyectos','sobre-mi','stack','contacto'];
+const links = [...document.querySelectorAll('#nav a')];
+const navObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + e.target.id));
     }
-  }
+  });
+}, { rootMargin: '-45% 0px -50% 0px' });
+sections.forEach(id => { const s = document.getElementById(id); if (s) navObs.observe(s); });
 
-  requestAnimationFrame(drawStars);
-}
-
-drawStars();
+/* Subtle nav shadow */
+const topnav = document.getElementById('topnav');
+addEventListener('scroll', () => topnav.classList.toggle('scrolled', scrollY > 10), { passive: true });
 </script>
-
-
 </body>
 </html>
