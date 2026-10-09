@@ -617,6 +617,7 @@ h2 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; co
   margin-bottom: 6px;
 }
 .stack-section > p { font-size: 0.88rem; color: var(--muted); margin-bottom: 24px; }
+.stack-section > p.stack-lead { font-size: 1rem; font-weight: 600; color: var(--ink); margin-bottom: 8px; }
 .stack-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .stack-group {
   background: rgba(255, 253, 245, 0.6);
