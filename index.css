@@ -555,6 +555,68 @@ h2 em { font-family: var(--font-serif); font-style: italic; font-weight: 400; co
 }
 .text-link:hover { color: var(--olive); }
 
+/* Listas de valor en proyectos */
+.work-features {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 0;
+}
+.work-features li {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--olive-deep);
+  background: rgba(195, 203, 164, 0.35);
+  border: 1px solid rgba(95, 102, 54, 0.25);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.work-features li::before { content: "✓ "; font-weight: 700; }
+
+/* Subgrupos de soluciones */
+.sol-groups { display: flex; flex-direction: column; gap: 18px; }
+.sol-title {
+  font-family: var(--font-disp);
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.18em !important;
+  text-transform: uppercase;
+  color: var(--olive-deep) !important;
+  margin-bottom: 10px !important;
+}
+
+/* Cómo trabajo */
+.process { padding-top: 0; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.process-step {
+  background: var(--card);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-m);
+  padding: 30px 26px;
+  box-shadow: var(--shadow-xs);
+  transition: transform 0.45s var(--ease), box-shadow 0.45s ease;
+}
+.process-step:hover { transform: translateY(-5px); box-shadow: var(--shadow-m); }
+.process-step .num {
+  font-family: var(--font-disp);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--olive);
+  display: block;
+  margin-bottom: 14px;
+}
+.process-step h3 {
+  font-family: var(--font-disp);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+.process-step p { font-size: 0.9rem; color: var(--muted); line-height: 1.65; }
+
 /* ============ SOBRE MI + STACK ============ */
 .about-grid {
   display: grid;
@@ -759,6 +821,7 @@ a:focus-visible, button:focus-visible {
   .section { padding: 90px 30px 70px; }
   .hero-grid { padding: 0 30px; gap: 50px; }
   .work-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: 1fr 1fr; }
   .about-grid { gap: 44px; }
 }
 
@@ -771,6 +834,7 @@ a:focus-visible, button:focus-visible {
   .float-note.n2 { left: 2%; }
   .services { grid-template-columns: 1fr; }
   .work-grid { grid-template-columns: 1fr; }
+  .process-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; gap: 36px; }
   .stack-groups { grid-template-columns: 1fr; gap: 16px; }
 }
